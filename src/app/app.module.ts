@@ -2,15 +2,21 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { BackendService } from './backend.service';
+import { CatalogModule } from './catalog/catalog.module';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CatalogModule,
+    HomeModule
   ],
-  providers: [],
+  providers: [BackendService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {} 
